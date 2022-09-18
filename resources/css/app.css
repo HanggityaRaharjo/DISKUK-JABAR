@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.search {
+    padding: 10px;
+    color: #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.search ::is(input, button) {
+    color: black;
+    border: none;
+    display: flex;
+    outline: none;
+}
+
+.search__input {
+    width: 40px;
+    height: 40px;
+
+    transition: width 0.5s;
+}
+
+.search__btn {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.search:focus-within input {
+    width: 200px;
+}
+::placeholder {
+    padding-left: 20px;
+    color: black;
+}
